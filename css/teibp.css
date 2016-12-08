@@ -42,10 +42,10 @@
   margin-bottom: 1em;
 }
 /* teibp classes */
-.-teibp-thumbnail {
+.c_teibp-thumbnail {
   max-height: 60px;
 }
-.-teibp-pb {
+.c_teibp-pb {
   display: block;
   width: 100%;
   text-align: right;
@@ -263,12 +263,12 @@ back {
 bibl {
   /* Empty Rule Set */
 }
-bibl[rend~="block"],
+/*bibl[rend~="block"],
 bibl[rendition~="#block"] {
   display: block;
   padding-left: 2em;
   text-indent: -2em;
-}
+}*/
 biblFull {
   display: block;
 }
@@ -374,19 +374,7 @@ cb:before {
   content: "[column break]";
 }
 cell {
-  display: table-cell;
-  padding: 1em 1.5em 1em 1em;
-  /*
-border-left: 2px solid @border-color;
-border-top:2px solid @border-color;
-*/
-
-  border: 1px dotted #aaaaaa;
-  width: 100%;
-}
-/* for cell or row with @role = label */
-[role=label] {
-  font-weight: bold;
+  /* removed to a specialised stylesheet */
 }
 certainty {
   /* Empty Rule Set */
@@ -537,8 +525,13 @@ custodialHist {
   margin-bottom: 1em;
 }
 /* d */
-date[when]:empty:before {
+/*date[when]:empty:before {
   content: attr(when);
+}*/
+div {
+/*    margin-top:1em;
+    margin-bottom:1em;*/
+    /*padding-bottom:1em;*/
 }
 /* e */
 egXML {
@@ -800,9 +793,7 @@ kinesic {
 }
 /* l */
 l {
-  display: block;
-  padding-left: 2em;
-  text-indent: -2em;
+/* Empty Rule Set */
 }
 list[type="gloss"] > label {
   display: block;
@@ -1027,24 +1018,23 @@ node {
 normalization {
   /* Empty Rule Set */
 }
+/* all notes that are not of @type footnote or endnote */
 note {
   display: block;
-  margin: 1.5em auto 1.5em auto;
-  padding: .5em 1.5em 1.5em 1.5em;
-  border: 1px solid black;
-  border-radius: 15px;
-  width: 325px;
   position: relative;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  /*margin: 1.5em auto 1.5em auto;
+  padding: .5em 1.5em 1.5em 1.5em;*/
+  /*border: 1px solid black;*/
+  /*border-radius: 15px;*/
+  /*width: 325px;*/
+  /*background: #fafafa;*/
   /* reset text-indent for note with <l> ancestors. */
-
-  text-indent: 0;
-  font-size: 85%;
-  text-align: justify;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  /*text-indent: 0;*/
+  /*font-size: 85%;*/
+  /*text-align: justify;*/
+  /*-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);*/
 }
 notesStmt {
   /* do we want to box each individual <note> if they're in a <notesStmt>? */
@@ -1106,9 +1096,9 @@ origin {
 }
 /* p */
 p {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  /*display: block;*/
+/*  margin-top: 1em;
+  margin-bottom: 1em;*/
   text-align: justify;
 }
 *[rendition~="#center"] p {
@@ -1129,15 +1119,8 @@ particDesc {
 pause {
   /* Empty Rule Set*/
 }
-pb {
-  display: block;
-  width: 100%;
-  text-align: right;
-  color: gray;
-  margin: 2em 0 2em 0;
-  font-size: 11pt;
-}
-.pb {
+/* these rules are not used due to the html design of page breaks*/
+pb, .pb {
   display: block;
   width: 100%;
   text-align: right;
@@ -1344,10 +1327,13 @@ residence {
 resp {
   /* Empty Rule Set */
 }
-respStmt {
+teiHeader respStmt {
   display: block;
-  margin-top: 0;
-  margin-bottom: 0;
+/*  margin-top: 0;
+  margin-bottom: 0;*/
+}
+.teibp_notes respStmt, TEI text respStmt {
+  display:inline;
 }
 /* hide */
 restore {
@@ -1372,7 +1358,7 @@ root {
   /* don't know */
 }
 row {
-  display: table-row;
+  /*removed to a specialised rule set*/
 }
 rs {
   /* Empty Rule Set */
@@ -1633,18 +1619,14 @@ TEI {
   display: block;
 }
 table {
-  border-collapse: separate;
-  border-spacing: 2px;
+ /* removed to a specialised rule set */
 }
 /* Why is this selector "TEI table" instead of just "table"? */
 TEI table {
-  display: block;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  font-size: 12pt;
+ /* removed to a specialised rule set */
 }
 table > head {
-  text-align: center;
+ /* removed to a specialised rule set */
 }
 teiHeader {
   display: block;
@@ -1657,6 +1639,7 @@ background:white;
   margin-top: 2em;
   margin-bottom: 2em;
   border-bottom: 1px solid #999;
+  clear: both;
 }
 TEI > text {
   display: block;
@@ -1676,27 +1659,29 @@ textDesc {
 }
 /* title */
 /* Need TEI ancestor to distinguish TEI title from HTML title */
-TEI title {
+TEI title, body title {
   display: inline;
 }
-TEI title[level=a] {
+/* I am not convinced that bibliographic information such as titles should be styled, 
+particularly since most conventions depend on the language of the text */
+/*title[level=a] {
   quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d";
 }
-TEI title[level=a]:before {
+title[level=a]:before {
   content: open-quote;
 }
-TEI title[level=a]:after {
+title[level=a]:after {
   content: close-quote;
 }
-TEI title[level=a][next]:after {
+title[level=a][next]:after {
   content: "" !important;
 }
-TEI title[level=a][prev]:before {
+title[level=a][prev]:before {
   content: "" !important;
 }
 title[level=m] {
   font-style: italic;
-}
+}*/
 /* We transformed teiHeader//title to tei.title  */
 /* as a hack to solve a JavaScript/jQuery issue. */
 titleStmt > tei-title {
@@ -1832,8 +1817,9 @@ footer {
   border-top: 1px solid #292929;
   padding-top: .5em;
   font-size: 12pt;
+  clear: both;
 }
-a:link,
+/* a:link,
 a:visited,
 a:active {
   color: #5f0000;
@@ -1842,7 +1828,7 @@ a:active {
 a:hover {
   color: #5f0000;
   text-decoration: underline;
-}
+}*/
 #teibpToolbox {
   left: 56em;
   top: 25px;

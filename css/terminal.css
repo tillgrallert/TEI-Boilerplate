@@ -14,8 +14,8 @@
   border-radius: 15px;
   width: 325px;
   position: relative;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  border: 1px solid #444444;
+  background: #252525;
   /* reset text-indent for note with <l> ancestors. */
 
   text-indent: 0;
@@ -68,10 +68,10 @@
   margin-left: 2em;
   margin-right: 4em;
   padding: 2.5em;
-  font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
+  font-family: Monaco, "Andale Mono", Courier, monospace;
   font-size: 14pt;
-  background-color: #ebebeb;
-  color: #292929;
+  background-color: #000000;
+  color: #00fd00;
   width: 33em;
 }
 .table-border {
@@ -80,7 +80,7 @@ border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
 */
 
-  border: 1px dotted #aaaaaa;
+  border: 1px dotted #444444;
 }
 /* Choice elements */
 choice abbr + expan:before,
@@ -238,7 +238,7 @@ author {
 }
 titleStmt > author {
   display: block;
-  font-family: Arvo, sans-serif;
+  font-family: Monaco, "Andale Mono", Courier, monospace;
   font-weight: normal;
   margin-bottom: 1em;
 }
@@ -381,7 +381,7 @@ border-left: 2px solid @border-color;
 border-top:2px solid @border-color;
 */
 
-  border: 1px dotted #aaaaaa;
+  border: 1px dotted #444444;
   width: 100%;
 }
 /* for cell or row with @role = label */
@@ -546,7 +546,7 @@ egXML {
   font-size: 80%;
   margin-left: 1em;
   padding-left: 1em;
-  border-left: 1px solid #aaaaaa;
+  border-left: 1px solid #444444;
   margin-top: .75em;
   margin-bottom: .75em;
   padding-top: .75em;
@@ -651,7 +651,7 @@ handShift {
 /* Need head with TEI parent to distinguish from HTML head */
 TEI head {
   display: block;
-  font-family: Arvo, sans-serif;
+  font-family: Monaco, "Andale Mono", Courier, monospace;
   font-weight: normal;
 }
 body > head {
@@ -686,8 +686,8 @@ figure > head {
   border-radius: 15px;
   width: 325px;
   position: relative;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  border: 1px solid #444444;
+  background: #252525;
   /* reset text-indent for note with <l> ancestors. */
 
   text-indent: 0;
@@ -697,7 +697,7 @@ figure > head {
   -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
   width: 85%;
-  font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
+  font-family: Monaco, "Andale Mono", Courier, monospace;
   font-size: 14pt;
 }
 headItem {
@@ -1035,8 +1035,8 @@ note {
   border-radius: 15px;
   width: 325px;
   position: relative;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  border: 1px solid #444444;
+  background: #252525;
   /* reset text-indent for note with <l> ancestors. */
 
   text-indent: 0;
@@ -1701,7 +1701,7 @@ title[level=m] {
 /* as a hack to solve a JavaScript/jQuery issue. */
 titleStmt > tei-title {
   display: block;
-  font-family: Arvo, sans-serif;
+  font-family: Monaco, "Andale Mono", Courier, monospace;
   font-weight: normal;
   font-weight: bold !important;
   font-size: 150%;
@@ -1818,29 +1818,29 @@ html {
   margin-left: 2em;
   margin-right: 4em;
   padding: 2.5em;
-  font-family: "Gentium Book Basic", Cochin, Georgia, Serif;
+  font-family: Monaco, "Andale Mono", Courier, monospace;
   font-size: 14pt;
-  background-color: #ebebeb;
-  color: #292929;
+  background-color: #000000;
+  color: #00fd00;
   width: 33em;
 }
 img {
-  border: 1px solid #aaaaaa;
+  border: 1px solid #444444;
 }
 footer {
   margin-top: 1em;
-  border-top: 1px solid #292929;
+  border-top: 1px solid #00fd00;
   padding-top: .5em;
   font-size: 12pt;
 }
 a:link,
 a:visited,
 a:active {
-  color: #5f0000;
+  color: #1cc0fa;
   text-decoration: none;
 }
 a:hover {
-  color: #5f0000;
+  color: #1cc0fa;
   text-decoration: underline;
 }
 #teibpToolbox {
@@ -1851,8 +1851,8 @@ a:hover {
   margin-right: 1em;
   padding: 1em;
   border-radius: 15px;
-  border: 1px solid #aaaaaa;
-  background: #fafafa;
+  border: 1px solid #444444;
+  background: #252525;
   font-family: Arvo, Verdana, sans-serif;
   text-align: justify;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
@@ -1865,7 +1865,7 @@ a:hover {
   font-size: 115%;
   margin-top: 0;
   margin-bottom: .5em;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #444444;
 }
 /* xml-serialization */
 .eg-element {
@@ -1883,7 +1883,7 @@ a:hover {
   color: #993300;
 }
 .eg-text {
-  color: #292929;
+  color: #00fd00;
 }
 /* loading animation */
 #loading {
@@ -1897,7 +1897,7 @@ a:hover {
 }
 /* facsViewer */
 #resizable {
-  background-color: #ebebeb;
+  background-color: #000000;
   width: 550px;
   height: 700px;
   overflow: hidden;
@@ -1916,7 +1916,8 @@ div.facsImage img {
 div.facsImage img:first-child {
   margin-top: 0;
 }
+/* Terminal Theme */
 .head-font {
-  font-family: Arvo, sans-serif;
+  font-family: Monaco, "Andale Mono", Courier, monospace;
   font-weight: normal;
 }
